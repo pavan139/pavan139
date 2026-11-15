@@ -1,168 +1,89 @@
-<div align="center">
+# Pavan Reddy Mogili
 
-<img src="./assets/hero.svg" alt="Pavan Reddy Mogili — Applied AI Engineer: retrieval, agents, evaluations, and reliable systems" width="100%" />
+**Applied AI Engineer** · Retrieval & RAG · Evaluation · Agent Systems · Inference Engineering
 
-<br/>
+I build software around AI models: the retrieval layer that supplies evidence, the evaluation harness that catches regressions, the tool boundary that limits actions, and the runtime that survives partial failure.
 
-<img src="./assets/avatar.svg" width="138" alt="Original illustrated engineer avatar" />
+My background spans enterprise software and data engineering, applied machine learning, and customer-facing delivery. I currently work at **Fidelity Investments**. Previously: biomedical NLP at **Affinia Therapeutics** and backend engineering at **Cognizant**.
 
-### I build AI systems that can be evaluated, constrained, and trusted.
-
-**Applied AI Engineer** · RAG & Retrieval · LLM Evaluation · Agent Reliability · Inference Systems
-
-[**Explore projects**](#selected-engineering-work) · [**What I optimize for**](#engineering-principles) · [**LinkedIn**](https://www.linkedin.com/in/pavan-reddy-mogili/) · [**Email**](mailto:pavanreddy139@gmail.com)
-
-</div>
+[LinkedIn](https://www.linkedin.com/in/pavan-reddy-mogili/) · [Email](mailto:pavanreddy139@gmail.com) · [Repositories](https://github.com/pavan139?tab=repositories)
 
 ---
 
-## Engineering useful AI beyond the demo
+## Selected work
 
-I work across the boundary between **LLM behavior and production software**: retrieving the right evidence, evaluating answers against independent signals, constraining tool execution, and making distributed workflows recover after failure.
+These are public, reproducible projects. Each one starts with an engineering failure mode and includes code, checks, and a record of what the experiments actually establish.
 
-My background spans **software engineering, data systems, applied ML, and enterprise delivery**. At Fidelity Investments, my work has included internal AI-assisted workflows, data validation, service development, and customer-facing implementations. Earlier work included biomedical NLP at Affinia Therapeutics and backend engineering at Cognizant.
+### 01. Agent execution and safety
 
-This GitHub is the technical companion to that experience. Projects here prioritize **reproducible experiments, explicit correctness contracts, tests that exercise failure modes, and documented limitations** over screenshot-only demos.
+**[Resilient Agent Runtime](https://github.com/pavan139/resilient-agent-runtime)**  
+*Transactional outbox/inbox · Idempotency · Crash recovery*
 
-> **Current focus:** Applied AI engineering roles where retrieval quality, evaluation rigor, tool safety, model efficiency, and operating constraints matter.
+The receiver commits an effect, but the sender crashes before acknowledging it. A two-database SQLite implementation explores how to redeliver safely using payload-bound inbox identities, fenced dispatch claims, and durable workflow state. The result distinguishes delivery acknowledgments from actual receiver effects.
 
-## Selected engineering work
+[Implementation](https://github.com/pavan139/resilient-agent-runtime/tree/project-main/src) · [Recovery tests](https://github.com/pavan139/resilient-agent-runtime/tree/project-main/verification) · [Recorded replay](https://github.com/pavan139/resilient-agent-runtime/blob/project-main/replays/outbox-demo.json)
 
-The projects below are **public, independently inspectable engineering exercises**. Their evaluation numbers describe the named fixtures and environments, not generalized production performance.
+**[Capability Guard](https://github.com/pavan139/capability-guard)**  
+*Least-privilege tool use · Authorization · Replay protection*
 
-<table>
-<tr>
-<td width="50%" valign="top">
+An agent should not be able to grant itself permissions through text. This project issues host-controlled HMAC capabilities and checks scope, revocation, quotas, ancestry, and fresh nonces before local effects. Quota usage and effect commit atomically in SQLite.
 
-### [Capability Guard](https://github.com/pavan139/capability-guard)
-**Tool-use security · Authorization · Replay defense**
+[Threat model](https://github.com/pavan139/capability-guard/tree/project-main/security) · [Adversarial checks](https://github.com/pavan139/capability-guard/tree/project-main/adversarial)
 
-HMAC-authenticated capabilities for typed agent actions, with scoped resources, quota attenuation, revocation, and nonce replay prevention. The nonce, quota charge, and local effect commit in one SQLite transaction.
+### 02. Model behavior and evaluation
 
-**Inspect:** [Threat model](https://github.com/pavan139/capability-guard/tree/project-main/security) · [Adversarial tests](https://github.com/pavan139/capability-guard/tree/project-main/adversarial)
+**[Tool Calling Lab](https://github.com/pavan139/tool-calling-lab)**  
+*Structured tool programs · Execution-based evaluation · SFT / DPO*
 
-</td>
-<td width="50%" valign="top">
+A syntactically valid tool call can still fail the task. This lab scores structured programs against an independent stateful executor, generates preference pairs from execution results, and includes optional LoRA SFT and DPO experiments. Its deterministic reference baseline is not presented as model accuracy.
 
-### [Agent Regression](https://github.com/pavan139/agent-regression)
-**LLM evaluation infrastructure · CI release gates**
+[Executor contract](https://github.com/pavan139/tool-calling-lab/blob/project-main/notes/robot-execution.md) · [Training methodology](https://github.com/pavan139/tool-calling-lab/blob/project-main/notes/preference-optimization.md)
 
-Grades output **and** execution traces against independently labeled cases. Includes mutation testing, metamorphic checks, paired release comparisons, and fail-closed treatment of missing cases. Its reference fixture uses a deterministic agent, not a deployed LLM.
+**[Speculative Decoding](https://github.com/pavan139/speculative-decoding)**  
+*Inference algorithms · Probability correctness · KV-cache behavior*
 
-**Inspect:** [Release inference](https://github.com/pavan139/agent-regression/blob/project-main/handbook/paired-release-inference.md) · [Suite](https://github.com/pavan139/agent-regression/tree/project-main/suites)
+Implements draft/target rejection sampling and cached block verification. Tests probability distributions against an enumerated reference and checks cache recovery after rejected tokens. CPU timing results are explicitly scoped to tiny locally generated checkpoints.
 
-</td>
-</tr>
-<tr>
-<td valign="top">
+[Correctness notebook](https://github.com/pavan139/speculative-decoding/blob/project-main/research/correctness-notebook.md) · [Measurement protocol](https://github.com/pavan139/speculative-decoding/blob/project-main/research/measurement-protocol.md)
 
-### [Resilient Agent Runtime](https://github.com/pavan139/resilient-agent-runtime)
-**Agent orchestration · Durable effects · Crash recovery**
+### 03. Monitoring and data reliability
 
-Transactional outbox/inbox across separate SQLite stores, payload-bound deduplication, fenced dispatcher claims, and explicit handling of the ambiguous lost-ACK window. Demonstrates why a dead letter does not prove an effect failed.
+**[Drift Sentinel](https://github.com/pavan139/drift-sentinel)**  
+*Sequential monitoring · Delayed labels · Alert lifecycle*
 
-**Inspect:** [Outbox replay](https://github.com/pavan139/resilient-agent-runtime/blob/project-main/replays/outbox-demo.json) · [Recovery tests](https://github.com/pavan139/resilient-agent-runtime/tree/project-main/verification)
+Separates changes in incoming features from changes in observed prediction quality. Handles delayed labels, deduplicates request identities, and documents the assumptions behind sequential alert thresholds rather than claiming certainty from a small quiet experiment.
 
-</td>
-<td valign="top">
+[Evaluation](https://github.com/pavan139/drift-sentinel/blob/project-main/measurements/evaluation.json) · [Statistical assumptions](https://github.com/pavan139/drift-sentinel/blob/project-main/analysis/spending-and-delay.md)
 
-### [Tool Calling Lab](https://github.com/pavan139/tool-calling-lab)
-**Structured tool calls · SFT / DPO · Execution scoring**
+**[Eventflow](https://github.com/pavan139/eventflow)**  
+*Event-time processing · Late data · Deterministic replay*
 
-Synthetic instruction-to-tool programs with schema validation, state-aware execution checks, held-out compositions, and optional LoRA SFT / DPO experiments. Separates a reference compiler's correctness from learned-model performance.
+Explores what happens when an event arrives after its window has already been published. Implements watermarks, retractions, checkpointing, source deduplication, and replay checks around an atomic SQLite state boundary.
 
-**Inspect:** [Robot contract](https://github.com/pavan139/tool-calling-lab/blob/project-main/notes/robot-execution.md) · [Training notes](https://github.com/pavan139/tool-calling-lab/blob/project-main/notes/preference-optimization.md)
+[Eventflow repository](https://github.com/pavan139/eventflow) · [Recovery tests](https://github.com/pavan139/eventflow/tree/project-main/recovery_tests)
 
-</td>
-</tr>
-<tr>
-<td valign="top">
+Also: **[Incremental Lakehouse](https://github.com/pavan139/incremental-lakehouse)**, a CDC pipeline with schema contracts, atomic publication, and independent rebuild comparisons.
 
-### [Speculative Decoding](https://github.com/pavan139/speculative-decoding)
-**Inference engineering · Sampling correctness**
+---
 
-Implements exact rejection/residual sampling, cached block verification, and cache-state recovery after rejection. Tests generated distributions against enumerable reference laws and separates tiny CPU-fixture timing from real-model speedup claims.
+## What I optimize for
 
-**Inspect:** [Correctness notes](https://github.com/pavan139/speculative-decoding/blob/project-main/research/correctness-notebook.md) · [Measurements](https://github.com/pavan139/speculative-decoding/blob/project-main/research/cached-block-results.md)
+| Concern | Questions I want answered |
+| --- | --- |
+| **Retrieval** | Is the evidence relevant, permitted, current, and sufficient to answer? |
+| **Evaluation** | What is the independent oracle? Which cases fail? Does the release gate catch regressions? |
+| **Agent safety** | Who authorizes tool effects? Can a request exceed its scope or replay a committed action? |
+| **Reliability** | What happens after a timeout, duplicate delivery, stale lease, or crash between two commits? |
+| **Performance** | What workload was measured? What does latency or cost actually include? |
 
-</td>
-<td valign="top">
+## Working stack
 
-### [Drift Sentinel](https://github.com/pavan139/drift-sentinel)
-**Model monitoring · Delayed labels · Statistical alerting**
+**AI & evaluation:** RAG, retrieval metrics, embeddings, PyTorch, Hugging Face, structured tool calls, SFT, regression testing  
+**Backend & data:** Python, FastAPI, Pydantic, TypeScript, SQL, PostgreSQL, SQLite, pandas, Snowpark  
+**Infrastructure:** Docker, Kubernetes, AWS, CI/CD, tracing, observability
 
-A bounded drift monitor with separate feature and outcome-quality signals, delayed-label joins, sequential testing, and alert lifecycle controls. Its reports state statistical assumptions and uncertainty rather than treating a quiet fixture as proof of zero false alerts.
+---
 
-**Inspect:** [Evaluation records](https://github.com/pavan139/drift-sentinel/blob/project-main/measurements/evaluation.json) · [Statistical assumptions](https://github.com/pavan139/drift-sentinel/blob/project-main/analysis/spending-and-delay.md)
+I am interested in **Applied AI Engineering** roles focused on LLM applications, retrieval, evaluations, agent platforms, and reliable inference systems.
 
-</td>
-</tr>
-</table>
-
-### More systems worth exploring
-
-| Area | Repository | Engineering question |
-| :-- | :-- | :-- |
-| Streaming data | [Eventflow](https://github.com/pavan139/eventflow) | What happens when late events revise already published windows? |
-| Data infrastructure | [Incremental Lakehouse](https://github.com/pavan139/incremental-lakehouse) | How can CDC batches publish atomically and recover safely? |
-
-*Some other repositories are currently private. I link public work here so reviewers can inspect code and evidence without requesting access.*
-
-## How I approach applied AI
-
-```text
-    INPUT & IDENTITY                MODEL BEHAVIOR              OPERATIONS
-  ┌──────────────────┐           ┌───────────────────┐       ┌───────────────────┐
-  │ Access boundaries│──────────▶│ Retrieval quality │──────▶│ Traces & metrics  │
-  │ Data provenance  │           │ Grounded responses│       │ Release decisions │
-  └──────────────────┘           │ Tool constraints  │       │ Fault recovery    │
-                                 └───────────────────┘       └───────────────────┘
-                                            │                          ▲
-                                            └──── EVALUATE & IMPROVE ──┘
-```
-
-My primary questions:
-
-1. **Can the system justify its answer?** Evaluate retrieval relevance, citation support, abstention, and source or permission boundaries.
-2. **Can we detect a regression before release?** Keep independent labels, explicit datasets, negative cases, and comparable baseline/candidate traces.
-3. **Can an agent do only what it is allowed to do?** Apply typed tools, scoped permissions, budgets, replay controls, and observable effects.
-4. **Can it survive partial failure?** Treat timeouts, duplicates, lost acknowledgements, stale leases, and conflicting state as first-class cases.
-5. **Are the numbers meaningful?** State workload, denominators, baselines, uncertainty, and where a benchmark does *not* generalize.
-
-## Core stack
-
-| Focus | Tools & methods |
-| :-- | :-- |
-| **Applied AI** | Python, PyTorch, Hugging Face, embeddings, RAG, retrieval evaluation, LoRA / SFT, structured tool calling |
-| **Backend** | FastAPI, Pydantic, REST APIs, PostgreSQL, SQL, TypeScript |
-| **Quality** | pytest, golden datasets, regression suites, CI checks, independent oracles, failure-mode analysis |
-| **Systems** | Docker, Kubernetes, AWS, SQLite, distributed delivery patterns, telemetry, tracing |
-| **Data** | pandas, NumPy, scikit-learn, Snowpark, reproducible ETL and data validation |
-
-## Engineering principles
-
-- **Correctness before cleverness.** A stronger-looking metric is not useful when the benchmark leaks labels or the oracle shares the same bug.
-- **Measure the failure case.** A happy path is a demonstration. Replay, cancellation, admission, malformed inputs, and boundary tests are evidence.
-- **Claims have a scope.** Synthetic datasets, locally generated checkpoints, and controlled CPU experiments are labeled as such.
-- **Safety is a system property.** Prompt instructions alone cannot grant authority, make operations idempotent, or enforce tenant boundaries.
-- **Operational cost is part of quality.** Latency, cost, resource limits, and recovery policy influence the design from the beginning.
-
-## Background and collaboration
-
-**Fidelity Investments** · Applied AI, software and data engineering in enterprise workflows  
-**Affinia Therapeutics** · Biomedical NLP and applied machine learning  
-**Cognizant** · Backend services, APIs, and data pipelines
-
-I work across research-to-implementation boundaries, from forming a measurable hypothesis through shipping services and supporting cross-functional delivery.
-
-<div align="center">
-
-### Build systems that earn trust through evidence.
-
-**Open to Applied AI Engineer opportunities**, including LLM applications, evaluation platforms, RAG, agents, and AI infrastructure.
-
-[LinkedIn](https://www.linkedin.com/in/pavan-reddy-mogili/) · [Email](mailto:pavanreddy139@gmail.com) · [GitHub](https://github.com/pavan139)
-
-<sub>Lasting quality over decoration. Every highlighted project links to code, tests, or recorded evidence.</sub>
-
-</div>
+**[Connect on LinkedIn](https://www.linkedin.com/in/pavan-reddy-mogili/)** · **[Email me](mailto:pavanreddy139@gmail.com)**
