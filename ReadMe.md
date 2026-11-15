@@ -1,15 +1,168 @@
-# 💫 About Me:
-👋 Hey there! I'm Pavan Reddy Mogili, a passionate and dedicated tech enthusiast specializing in Data Science 📊 and Web Development 💻.<br><br>🎓 I'm currently pursuing my Master's degree in Data Science at Northeastern University, with an expected graduation date in May 2023. My journey so far includes working as a Software Engineer at Cognizant Technology Solutions 💼 and interning as a Data Scientist at Affinia Therapeutics 🔬. I've also been fortunate to share my knowledge as a Teaching Assistant for Web Development and Data Science courses at Northeastern University 🏫.<br><br>🚀 My expertise lies in Machine Learning 🤖, Data Engineering 🗄️, and Algorithms 📜, seamlessly integrating them with Web Development 🖥️ frameworks like Angular and Spring Boot. My ultimate goal is to develop accessible and user-friendly solutions that empower businesses to make data-driven decisions.<br><br>🌐 In my free time, I enjoy connecting with fellow professionals on LinkedIn and exploring the vibrant city of Boston, MA 🏙️. If you have any questions, feel free to reach out to me at pavanreddy139@gmail.com 📧.<br><br>🔍 I'm actively seeking new job opportunities to broaden my horizons and contribute to innovative projects. If you believe I'd be a valuable addition to your team, let's connect and discuss how we can collaborate! 🤝
+<div align="center">
 
+<img src="./assets/hero.svg" alt="Pavan Reddy Mogili — Applied AI Engineer: retrieval, agents, evaluations, and reliable systems" width="100%" />
 
-## 🌐 Socials:
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/pavan-reddy-mogili/) 
-[![LinkedIn](https://img.shields.io/badge/-My%20Website-red)](https://pavanmogili.com) 
+<br/>
 
-# 💻 Tech Stack:
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) ![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=azure-devops&logoColor=white) ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white) ![Google Cloud](https://img.shields.io/badge/Google%20Cloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white) ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white) ![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white) ![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white) ![Angular.js](https://img.shields.io/badge/angular.js-%23E23237.svg?style=for-the-badge&logo=angularjs&logoColor=white) ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white) ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white) ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white) ![Apache Airflow](https://img.shields.io/badge/Apache%20Airflow-017CEE?style=for-the-badge&logo=Apache%20Airflow&logoColor=white) ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white) ![Jenkins](https://img.shields.io/badge/jenkins-%232C5263.svg?style=for-the-badge&logo=jenkins&logoColor=white) ![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white) ![AmazonDynamoDB](https://img.shields.io/badge/Amazon%20DynamoDB-4053D6?style=for-the-badge&logo=Amazon%20DynamoDB&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![ApacheCassandra](https://img.shields.io/badge/cassandra-%231287B1.svg?style=for-the-badge&logo=apache-cassandra&logoColor=white) ![MicrosoftSQLServer](https://img.shields.io/badge/Microsoft%20SQL%20Sever-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![SciPy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white) ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white) ![LINUX](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white) ![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white) ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white) ![ElasticSearch](https://img.shields.io/badge/-ElasticSearch-005571?style=for-the-badge&logo=elasticsearch) ![Raspberry Pi](https://img.shields.io/badge/-RaspberryPi-C51A4A?style=for-the-badge&logo=Raspberry-Pi) ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+<img src="./assets/avatar.svg" width="138" alt="Original illustrated engineer avatar" />
 
+### I build AI systems that can be evaluated, constrained, and trusted.
 
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
+**Applied AI Engineer** · RAG & Retrieval · LLM Evaluation · Agent Reliability · Inference Systems
 
+[**Explore projects**](#selected-engineering-work) · [**What I optimize for**](#engineering-principles) · [**LinkedIn**](https://www.linkedin.com/in/pavan-reddy-mogili/) · [**Email**](mailto:pavanreddy139@gmail.com)
+
+</div>
+
+---
+
+## Engineering useful AI beyond the demo
+
+I work across the boundary between **LLM behavior and production software**: retrieving the right evidence, evaluating answers against independent signals, constraining tool execution, and making distributed workflows recover after failure.
+
+My background spans **software engineering, data systems, applied ML, and enterprise delivery**. At Fidelity Investments, my work has included internal AI-assisted workflows, data validation, service development, and customer-facing implementations. Earlier work included biomedical NLP at Affinia Therapeutics and backend engineering at Cognizant.
+
+This GitHub is the technical companion to that experience. Projects here prioritize **reproducible experiments, explicit correctness contracts, tests that exercise failure modes, and documented limitations** over screenshot-only demos.
+
+> **Current focus:** Applied AI engineering roles where retrieval quality, evaluation rigor, tool safety, model efficiency, and operating constraints matter.
+
+## Selected engineering work
+
+The projects below are **public, independently inspectable engineering exercises**. Their evaluation numbers describe the named fixtures and environments, not generalized production performance.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### [Capability Guard](https://github.com/pavan139/capability-guard)
+**Tool-use security · Authorization · Replay defense**
+
+HMAC-authenticated capabilities for typed agent actions, with scoped resources, quota attenuation, revocation, and nonce replay prevention. The nonce, quota charge, and local effect commit in one SQLite transaction.
+
+**Inspect:** [Threat model](https://github.com/pavan139/capability-guard/tree/project-main/security) · [Adversarial tests](https://github.com/pavan139/capability-guard/tree/project-main/adversarial)
+
+</td>
+<td width="50%" valign="top">
+
+### [Agent Regression](https://github.com/pavan139/agent-regression)
+**LLM evaluation infrastructure · CI release gates**
+
+Grades output **and** execution traces against independently labeled cases. Includes mutation testing, metamorphic checks, paired release comparisons, and fail-closed treatment of missing cases. Its reference fixture uses a deterministic agent, not a deployed LLM.
+
+**Inspect:** [Release inference](https://github.com/pavan139/agent-regression/blob/project-main/handbook/paired-release-inference.md) · [Suite](https://github.com/pavan139/agent-regression/tree/project-main/suites)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+### [Resilient Agent Runtime](https://github.com/pavan139/resilient-agent-runtime)
+**Agent orchestration · Durable effects · Crash recovery**
+
+Transactional outbox/inbox across separate SQLite stores, payload-bound deduplication, fenced dispatcher claims, and explicit handling of the ambiguous lost-ACK window. Demonstrates why a dead letter does not prove an effect failed.
+
+**Inspect:** [Outbox replay](https://github.com/pavan139/resilient-agent-runtime/blob/project-main/replays/outbox-demo.json) · [Recovery tests](https://github.com/pavan139/resilient-agent-runtime/tree/project-main/verification)
+
+</td>
+<td valign="top">
+
+### [Tool Calling Lab](https://github.com/pavan139/tool-calling-lab)
+**Structured tool calls · SFT / DPO · Execution scoring**
+
+Synthetic instruction-to-tool programs with schema validation, state-aware execution checks, held-out compositions, and optional LoRA SFT / DPO experiments. Separates a reference compiler's correctness from learned-model performance.
+
+**Inspect:** [Robot contract](https://github.com/pavan139/tool-calling-lab/blob/project-main/notes/robot-execution.md) · [Training notes](https://github.com/pavan139/tool-calling-lab/blob/project-main/notes/preference-optimization.md)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+### [Speculative Decoding](https://github.com/pavan139/speculative-decoding)
+**Inference engineering · Sampling correctness**
+
+Implements exact rejection/residual sampling, cached block verification, and cache-state recovery after rejection. Tests generated distributions against enumerable reference laws and separates tiny CPU-fixture timing from real-model speedup claims.
+
+**Inspect:** [Correctness notes](https://github.com/pavan139/speculative-decoding/blob/project-main/research/correctness-notebook.md) · [Measurements](https://github.com/pavan139/speculative-decoding/blob/project-main/research/cached-block-results.md)
+
+</td>
+<td valign="top">
+
+### [Drift Sentinel](https://github.com/pavan139/drift-sentinel)
+**Model monitoring · Delayed labels · Statistical alerting**
+
+A bounded drift monitor with separate feature and outcome-quality signals, delayed-label joins, sequential testing, and alert lifecycle controls. Its reports state statistical assumptions and uncertainty rather than treating a quiet fixture as proof of zero false alerts.
+
+**Inspect:** [Evaluation records](https://github.com/pavan139/drift-sentinel/blob/project-main/measurements/evaluation.json) · [Statistical assumptions](https://github.com/pavan139/drift-sentinel/blob/project-main/analysis/spending-and-delay.md)
+
+</td>
+</tr>
+</table>
+
+### More systems worth exploring
+
+| Area | Repository | Engineering question |
+| :-- | :-- | :-- |
+| Streaming data | [Eventflow](https://github.com/pavan139/eventflow) | What happens when late events revise already published windows? |
+| Data infrastructure | [Incremental Lakehouse](https://github.com/pavan139/incremental-lakehouse) | How can CDC batches publish atomically and recover safely? |
+
+*Some other repositories are currently private. I link public work here so reviewers can inspect code and evidence without requesting access.*
+
+## How I approach applied AI
+
+```text
+    INPUT & IDENTITY                MODEL BEHAVIOR              OPERATIONS
+  ┌──────────────────┐           ┌───────────────────┐       ┌───────────────────┐
+  │ Access boundaries│──────────▶│ Retrieval quality │──────▶│ Traces & metrics  │
+  │ Data provenance  │           │ Grounded responses│       │ Release decisions │
+  └──────────────────┘           │ Tool constraints  │       │ Fault recovery    │
+                                 └───────────────────┘       └───────────────────┘
+                                            │                          ▲
+                                            └──── EVALUATE & IMPROVE ──┘
+```
+
+My primary questions:
+
+1. **Can the system justify its answer?** Evaluate retrieval relevance, citation support, abstention, and source or permission boundaries.
+2. **Can we detect a regression before release?** Keep independent labels, explicit datasets, negative cases, and comparable baseline/candidate traces.
+3. **Can an agent do only what it is allowed to do?** Apply typed tools, scoped permissions, budgets, replay controls, and observable effects.
+4. **Can it survive partial failure?** Treat timeouts, duplicates, lost acknowledgements, stale leases, and conflicting state as first-class cases.
+5. **Are the numbers meaningful?** State workload, denominators, baselines, uncertainty, and where a benchmark does *not* generalize.
+
+## Core stack
+
+| Focus | Tools & methods |
+| :-- | :-- |
+| **Applied AI** | Python, PyTorch, Hugging Face, embeddings, RAG, retrieval evaluation, LoRA / SFT, structured tool calling |
+| **Backend** | FastAPI, Pydantic, REST APIs, PostgreSQL, SQL, TypeScript |
+| **Quality** | pytest, golden datasets, regression suites, CI checks, independent oracles, failure-mode analysis |
+| **Systems** | Docker, Kubernetes, AWS, SQLite, distributed delivery patterns, telemetry, tracing |
+| **Data** | pandas, NumPy, scikit-learn, Snowpark, reproducible ETL and data validation |
+
+## Engineering principles
+
+- **Correctness before cleverness.** A stronger-looking metric is not useful when the benchmark leaks labels or the oracle shares the same bug.
+- **Measure the failure case.** A happy path is a demonstration. Replay, cancellation, admission, malformed inputs, and boundary tests are evidence.
+- **Claims have a scope.** Synthetic datasets, locally generated checkpoints, and controlled CPU experiments are labeled as such.
+- **Safety is a system property.** Prompt instructions alone cannot grant authority, make operations idempotent, or enforce tenant boundaries.
+- **Operational cost is part of quality.** Latency, cost, resource limits, and recovery policy influence the design from the beginning.
+
+## Background and collaboration
+
+**Fidelity Investments** · Applied AI, software and data engineering in enterprise workflows  
+**Affinia Therapeutics** · Biomedical NLP and applied machine learning  
+**Cognizant** · Backend services, APIs, and data pipelines
+
+I work across research-to-implementation boundaries, from forming a measurable hypothesis through shipping services and supporting cross-functional delivery.
+
+<div align="center">
+
+### Build systems that earn trust through evidence.
+
+**Open to Applied AI Engineer opportunities**, including LLM applications, evaluation platforms, RAG, agents, and AI infrastructure.
+
+[LinkedIn](https://www.linkedin.com/in/pavan-reddy-mogili/) · [Email](mailto:pavanreddy139@gmail.com) · [GitHub](https://github.com/pavan139)
+
+<sub>Lasting quality over decoration. Every highlighted project links to code, tests, or recorded evidence.</sub>
+
+</div>
