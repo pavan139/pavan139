@@ -16,6 +16,20 @@ My path so far: software and data engineering at **Cognizant**, an **M.S. in Dat
 
 **Open to Applied AI, LLM platform and ML infrastructure roles.** The quickest way to reach me is [email](mailto:pavanreddy139@gmail.com) or [LinkedIn](https://www.linkedin.com/in/pavan-reddy-mogili/).
 
+## Flagship: PlanDesk
+
+<a href="https://github.com/pavan139/plandesk"><img src="./assets/cards/plandesk.svg" width="100%" alt="PlanDesk (Python): grounded answers on U.S. retirement-plan rules from IRS Publications 590-A, 590-B and 560 with a real LLM, year-aware hybrid retrieval and verified quotes. 97.1% correct on 35 answerable questions and 7 of 7 unanswerable questions refused."></a>
+
+A real-LLM application, end to end: the same pattern as the RAG assistant I built at work, rebuilt on public IRS documents so anyone can check every answer.
+
+- **Retrieval:** BM25 + embeddings fused, filtered to the tax-year edition the question asks about. Honest result: naive RAG without the filter scored the same 97.1%, because the model picks the right year when both editions are in context. The filter's measurable effect is narrower: citations come from the edition that matches the question.
+- **Grounding:** the model must return verbatim quotes; any quote not found in the cited excerpt turns the answer into a refusal.
+- **Evaluation:** 42 hand-written questions, deterministic scoring with no LLM judge. Closed book scored 94.3% because the model already knows most limits, but it answered 3 of 7 out-of-scope questions anyway and none of its answers can be traced to a source. Every miss is listed in the report, and CI re-scores the recorded runs as a release gate.
+
+## Research: Count Lineages, Not Checkpoints
+
+[count-lineages](https://github.com/pavan139/count-lineages): item-level analyses of LLM benchmarks treat every leaderboard model as an independent test-taker, but most share a base model with many others. This work measures what that does to uncertainty in IRT and label-error screens, and ships `modelkin`, a tool that accounts for model families. Paper source, analysis code and data are public; preprint coming soon.
+
 ## Building now: Turtledove
 
 <img src="./assets/turtledove.svg" width="100%" alt="Turtledove, a SwiftUI iPhone app for couples built by Pavan Reddy Mogili: shared plans, trips, habits and a journal, with widgets, Siri, on-device Apple Intelligence, a Supabase Postgres backend and an MCP server for AI assistants. Closed beta on TestFlight.">
@@ -31,7 +45,7 @@ Designed and built solo, end to end:
 
 <img src="./assets/system-map.svg" width="100%" alt="System map of an LLM application with Pavan Reddy Mogili's projects on each layer. Data and features: chronofeature, eventflow, incremental-lakehouse, query-forge. Serving: servegate, model-ledger, quorum-lab. Retrieval: temporal-rag, hard-negative-retrieval. Model and decoding: speculative-decoding, constrained-generation, model-router, pixel-to-program. Guardrails: capability-guard. Tools and runtime: resilient-agent-runtime, agent-arena. Evaluation and monitoring: agent-regression, tool-calling-lab, drift-sentinel.">
 
-Nineteen public project repos, each built around a specific failure mode, from retrieval and decoding to data pipelines and consensus. Every one ships with tests and a README that records what the experiments actually show, including the unflattering results.
+Twenty-one public repos: a real-LLM flagship, an evaluation research project, and nineteen labs each built around a specific failure mode, from retrieval and decoding to data pipelines and consensus. Every one ships with tests and a README that records what the experiments actually show, including the unflattering results.
 
 <a id="featured-work"></a>
 
@@ -48,7 +62,19 @@ Nineteen public project repos, each built around a specific failure mode, from r
   <a href="https://github.com/pavan139/servegate"><img src="./assets/cards/servegate.svg" width="49%" alt="ServeGate (Go): model serving gateway with deadline-aware microbatching, fair multi-tenant admission control, cancellation and circuit breaking. 128 backend calls reduced to 16 with 8-way batching."></a>
 </p>
 
-### The rest of the lab
+### More AI experiments
+
+| Layer | Project | What it explores |
+| --- | --- | --- |
+| Model & decoding | [constrained-generation](https://github.com/pavan139/constrained-generation) | Grammar-constrained decoding with incremental parsing, token masks and bounded interpreters |
+| Model & decoding | [model-router](https://github.com/pavan139/model-router) | Learned routing between a cheaper and a stronger model on simulated costs: 25/36 correct vs 23/36 for always-large at budget 180, and it loses to always-small at tight budgets |
+| Model & decoding | [pixel-to-program](https://github.com/pavan139/pixel-to-program) | An encoder-decoder that reads an image and writes the program that draws it |
+| Tools & runtime | [agent-arena](https://github.com/pavan139/agent-arena) | D* Lite replanning for bounded agents: 5,108 vs 13,193 vertex expansions for repeated BFS, at the cost of more edge checks |
+| Evaluation & monitoring | [drift-sentinel](https://github.com/pavan139/drift-sentinel) | Sequential drift monitoring with delayed labels and an alert lifecycle |
+
+### Systems foundations
+
+The data and infrastructure underneath ML systems: feature stores, streaming, warehouses, registries and consensus.
 
 | Layer | Project | What it explores |
 | --- | --- | --- |
@@ -58,11 +84,6 @@ Nineteen public project repos, each built around a specific failure mode, from r
 | Data & features | [query-forge](https://github.com/pavan139/query-forge) | A small SQL engine with a join optimizer, checked against SQLite. On the demo query the optimized plan does 805 hash probes where the reference checks 100,644 nested-loop pairs (work counters, not latency) |
 | Serving | [model-ledger](https://github.com/pavan139/model-ledger) | Content-addressed model registry with lineage, compare-and-swap promotions and rollback |
 | Serving | [quorum-lab](https://github.com/pavan139/quorum-lab) | Durable Raft in Go under network partitions and restarts, with a safety checker |
-| Model & decoding | [constrained-generation](https://github.com/pavan139/constrained-generation) | Grammar-constrained decoding with incremental parsing, token masks and bounded interpreters |
-| Model & decoding | [model-router](https://github.com/pavan139/model-router) | Learned routing between a cheaper and a stronger model on simulated costs: 25/36 correct vs 23/36 for always-large at budget 180, and it loses to always-small at tight budgets |
-| Model & decoding | [pixel-to-program](https://github.com/pavan139/pixel-to-program) | An encoder-decoder that reads an image and writes the program that draws it |
-| Tools & runtime | [agent-arena](https://github.com/pavan139/agent-arena) | D* Lite replanning for bounded agents: 5,108 vs 13,193 vertex expansions for repeated BFS, at the cost of more edge checks |
-| Evaluation & monitoring | [drift-sentinel](https://github.com/pavan139/drift-sentinel) | Sequential drift monitoring with delayed labels and an alert lifecycle |
 
 ## The path so far
 
