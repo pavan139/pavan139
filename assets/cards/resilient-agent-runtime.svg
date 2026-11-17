@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" width="640" height="340" role="img" aria-labelledby="title">
-<title id="title">Resilient Agent Runtime (Python): transactional outbox and inbox, payload-bound deduplication and crash recovery so AI agent side effects run exactly once. Result: 12/12 defined failure cases pass: concurrent deliveries, races, conflicts, restarts</title>
+<title id="title">Resilient Agent Runtime (Python): transactional outbox and inbox, payload-bound deduplication and crash recovery, so a redelivered agent action is not applied twice. Result: 12/12 defined failure cases pass: concurrent deliveries, races, conflicts, restarts</title>
 <defs>
 <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0C1328"/><stop offset="1" stop-color="#121B39"/></linearGradient>
 <linearGradient id="acc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5EEAD4"/><stop offset="1" stop-color="#60A5FA"/></linearGradient>
