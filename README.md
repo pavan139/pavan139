@@ -12,7 +12,11 @@
 
 I'm a **Senior Data Scientist at Fidelity Investments**, and I build the reliability layer around LLMs: the retrieval that decides what a model gets to see, the evals that catch a regression before users do, the permission check in front of every tool call, and the runtime that survives a crash at the worst possible moment.
 
-My path so far: software and data engineering at **Cognizant**, an **M.S. in Data Science at Northeastern University** (where I also TA'd AI/ML and deep learning), machine learning on biomedical text at **Affinia Therapeutics**, and data science at Fidelity since 2023. The lesson that stuck with me is that the model is rarely the part that breaks. Everything around it is. That's the part I build, test, and write up honestly, including when the numbers are unflattering.
+**Start here**
+
+- **[PlanDesk](https://github.com/pavan139/plandesk)** is a real-LLM app with its own eval: cited answers on U.S. retirement-plan rules from IRS publications. With gpt-5.4-mini it got 97.1% of 35 answerable questions right and refused all 7 out-of-scope ones. Closed book scored 94.3%, but it answered 3 of those 7 with nothing to cite.
+- **[Count Lineages, Not Checkpoints](https://github.com/pavan139/count-lineages)** is my research on LLM benchmarks: 29% of 1,151 archived Open LLM Leaderboard models belong to one base-model family, and in a simulation matched to that panel, nominal 95% intervals for item difficulty cover their target only 28 to 37% of the time.
+- **[Nineteen labs](#every-layer-around-the-model)**, each built around one way LLM systems fail, with tests, CI and a README that says what the experiments show and what they don't.
 
 **Open to Applied AI, LLM platform and ML infrastructure roles.** The quickest way to reach me is [email](mailto:pavanreddy139@gmail.com) or [LinkedIn](https://www.linkedin.com/in/pavan-reddy-mogili/).
 
@@ -28,7 +32,12 @@ A real-LLM application, end to end: the same pattern as the RAG assistant I buil
 
 ## Research: Count Lineages, Not Checkpoints
 
-[count-lineages](https://github.com/pavan139/count-lineages): item-level analyses of LLM benchmarks treat every leaderboard model as an independent test-taker, but most share a base model with many others. This work measures what that does to uncertainty in IRT and label-error screens, and ships `modelkin`, a tool that accounts for model families. Paper source, analysis code and data are public; preprint coming soon.
+[count-lineages](https://github.com/pavan139/count-lineages): item-level analyses of LLM benchmarks treat every leaderboard model as an independent test-taker, but most share a base model with many others. This work measures what that does to uncertainty in IRT and label-error screens, and ships `modelkin`, a tool that accounts for model families.
+
+- On the archive's real responses, family-level standard errors of item-rest correlations are 1.4 to 2.0 times the model-level ones, and 16 to 52% of the items a screen flags as significantly negative lose significance.
+- The unflattering part: against documented label errors in GSM8K-Platinum and MMLU-Redux, lineage-aware scores rank flawed items no better than the usual screen. Lineage changes how much evidence a flag carries, not which items to inspect first.
+
+Paper source and PDF, analysis code, response matrices and `modelkin` are in the repo; preprint coming soon.
 
 ## Building now: Turtledove
 
@@ -45,7 +54,7 @@ Designed and built solo, end to end:
 
 <img src="./assets/system-map.svg" width="100%" alt="System map of an LLM application with Pavan Reddy Mogili's projects on each layer. Data and features: chronofeature, eventflow, incremental-lakehouse, query-forge. Serving: servegate, model-ledger, quorum-lab. Retrieval: temporal-rag, hard-negative-retrieval. Model and decoding: speculative-decoding, constrained-generation, model-router, pixel-to-program. Guardrails: capability-guard. Tools and runtime: resilient-agent-runtime, agent-arena. Evaluation and monitoring: agent-regression, tool-calling-lab, drift-sentinel.">
 
-Twenty-one public repos: a real-LLM flagship, an evaluation research project, and nineteen labs each built around a specific failure mode, from retrieval and decoding to data pipelines and consensus. Every one ships with tests and a README that records what the experiments actually show, including the unflattering results.
+Twenty-one public project repos: a real-LLM flagship, an evaluation research project, and nineteen labs each built around a specific failure mode, from retrieval and decoding to data pipelines and consensus. Every one ships with tests and a README that records what the experiments actually show, including the unflattering results. Most labs run on deterministic fixtures and synthetic data with no required third-party packages, so anyone can rerun them; their numbers measure the mechanism, not model quality.
 
 <a id="featured-work"></a>
 
@@ -86,6 +95,8 @@ The data and infrastructure underneath ML systems: feature stores, streaming, wa
 | Serving | [quorum-lab](https://github.com/pavan139/quorum-lab) | Durable Raft in Go under network partitions and restarts, with a safety checker |
 
 ## The path so far
+
+Software and data engineering at **Cognizant**, an **M.S. in Data Science at Northeastern University** (where I also TA'd AI/ML and deep learning), machine learning on biomedical text at **Affinia Therapeutics**, and data science at Fidelity since 2023. The lesson that stuck with me is that the model is rarely the part that breaks. Everything around it is. That's the part I build, test, and write up honestly, including when the numbers are unflattering.
 
 <img src="./assets/timeline.svg" width="100%" alt="Career timeline of Pavan Reddy Mogili: B.Tech in Computer Engineering at JNTU (2015 to 2019); Software Engineer at Cognizant (2019 to 2021); M.S. in Data Science at Northeastern University with a 4.0 GPA and graduate teaching assistant roles (2021 to 2023); Machine Learning Intern at Affinia Therapeutics (2022); Senior Data Scientist at Fidelity Investments (2023 to now); doctoral program at the University of the Cumberlands (2026 to now); building Turtledove, an iOS app (2026).">
 
